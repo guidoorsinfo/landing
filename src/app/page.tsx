@@ -78,7 +78,7 @@ export default function GuidoorsLanding() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-full border-2 border-slate-300 focus:border-indigo-600 focus:outline-none text-lg"
+                  className="flex-1 px-6 py-4 rounded-full border-2 border-slate-300 focus:border-indigo-600 focus:outline-none text-lg text-slate-500"
                 />
                 <button
                   onClick={handleSubmit}
@@ -148,7 +148,7 @@ export default function GuidoorsLanding() {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">
+                  <h3 className="font-bold text-lg mb-2 text-slate-900">
                     Tokyo Food Adventure
                   </h3>
                   <p className="text-sm text-slate-600 mb-3">
@@ -174,7 +174,9 @@ export default function GuidoorsLanding() {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Crete by Ferry</h3>
+                  <h3 className="font-bold text-lg mb-2 text-slate-900">
+                    Crete by Ferry
+                  </h3>
                   <p className="text-sm text-slate-600 mb-3">
                     Complete island hopping guide
                   </p>
@@ -241,7 +243,9 @@ export default function GuidoorsLanding() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <DollarSign className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Biased Reviews</h3>
+              <h3 className="font-bold text-lg mb-2 text-slate-900">
+                Biased Reviews
+              </h3>
               <p className="text-slate-600">
                 Sponsored content disguised as authentic recommendations
               </p>
@@ -397,7 +401,9 @@ export default function GuidoorsLanding() {
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Affordable Access</h3>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">
+                Affordable Access
+              </h3>
               <p className="text-slate-600">
                 Even buying 10 guides for a new destination costs less than a
                 single meal. Incredible value.
@@ -466,7 +472,7 @@ export default function GuidoorsLanding() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-full border-2 border-slate-300 focus:border-indigo-600 focus:outline-none text-lg"
+                className="flex-1 px-6 py-4 rounded-full border-2 border-slate-300 focus:border-indigo-600 focus:outline-none text-lg text-slate-500"
               />
               <button
                 onClick={handleSubmit}
