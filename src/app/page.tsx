@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useState } from "react";
 import {
@@ -19,12 +18,12 @@ export default function GuidoorsLanding() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    // Store email in memory for demo
-    setSubmitted(true);
-    setEmail("");
-    setTimeout(() => setSubmitted(false), 3000);
+  const handleSubmit = () => {
+    if (email && email.includes("@")) {
+      setSubmitted(true);
+      setEmail("");
+      setTimeout(() => setSubmitted(false), 3000);
+    }
   };
 
   return (
@@ -72,18 +71,17 @@ export default function GuidoorsLanding() {
             </p>
 
             {/* Email Signup */}
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
+            <div className="max-w-md mx-auto mb-8">
               <div className="flex gap-3">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  required
                   className="flex-1 px-6 py-4 rounded-full border-2 border-slate-300 focus:border-indigo-600 focus:outline-none text-lg"
                 />
                 <button
-                  type="submit"
+                  onClick={handleSubmit}
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all font-semibold whitespace-nowrap"
                 >
                   Join Waitlist
@@ -94,7 +92,7 @@ export default function GuidoorsLanding() {
                   ✓ You're on the list! We'll be in touch soon.
                 </p>
               )}
-            </form>
+            </div>
 
             <div className="flex items-center justify-center space-x-8 text-sm text-slate-500">
               <div className="flex items-center space-x-2">
@@ -114,11 +112,17 @@ export default function GuidoorsLanding() {
             <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-slate-200">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Sample Guide Cards */}
+
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-indigo-200">
-                  <div className="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 flex items-center justify-center">
-                    <Camera className="w-12 h-12 text-white" />
+                  <div className="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 overflow-hidden relative">
+                    <img
+                      src="/santorini.jpg"
+                      alt="Santorini sunset view"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">
+                  <h3 className="font-bold text-lg mb-2 text-slate-900">
                     Santorini Hidden Gems
                   </h3>
                   <p className="text-sm text-slate-600 mb-3">
@@ -135,9 +139,14 @@ export default function GuidoorsLanding() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
-                  <div className="aspect-video bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg mb-4 flex items-center justify-center">
-                    <Heart className="w-12 h-12 text-white" />
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-indigo-200">
+                  <div className="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 overflow-hidden relative">
+                    <img
+                      src="/tokyo.jpg"
+                      alt="Tokyo sunset view"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <h3 className="font-bold text-lg mb-2">
                     Tokyo Food Adventure
@@ -156,9 +165,14 @@ export default function GuidoorsLanding() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
-                  <div className="aspect-video bg-gradient-to-br from-green-400 to-emerald-600 rounded-lg mb-4 flex items-center justify-center">
-                    <MapPin className="w-12 h-12 text-white" />
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-indigo-200">
+                  <div className="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 overflow-hidden relative">
+                    <img
+                      src="/crete.webp"
+                      alt="Tokyo sunset view"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <h3 className="font-bold text-lg mb-2">Crete by Ferry</h3>
                   <p className="text-sm text-slate-600 mb-3">
@@ -445,18 +459,17 @@ export default function GuidoorsLanding() {
             guides. Join our waitlist and get early access when we launch.
           </p>
 
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          <div className="max-w-md mx-auto">
             <div className="flex gap-3">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                required
                 className="flex-1 px-6 py-4 rounded-full border-2 border-slate-300 focus:border-indigo-600 focus:outline-none text-lg"
               />
               <button
-                type="submit"
+                onClick={handleSubmit}
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all font-semibold whitespace-nowrap flex items-center space-x-2"
               >
                 <span>Join Now</span>
@@ -468,7 +481,7 @@ export default function GuidoorsLanding() {
                 ✓ Welcome aboard! Check your email soon.
               </p>
             )}
-          </form>
+          </div>
 
           <p className="text-slate-500 mt-6">
             Join 4.1 million daily travelers discovering a better way to explore
