@@ -213,7 +213,9 @@ export default function GuidoorsLanding() {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-red-600" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Hours Wasted</h3>
+              <h3 className="font-bold text-lg mb-2 text-slate-900">
+                Hours Wasted
+              </h3>
               <p className="text-slate-600">
                 Endless research across multiple platforms and blogs
               </p>
@@ -223,7 +225,9 @@ export default function GuidoorsLanding() {
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Search className="w-8 h-8 text-orange-600" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Scattered Info</h3>
+              <h3 className="font-bold text-lg mb-2 text-slate-900">
+                Scattered Info
+              </h3>
               <p className="text-slate-600">
                 Information is fragmented and hard to piece together
               </p>
@@ -233,7 +237,9 @@ export default function GuidoorsLanding() {
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-yellow-600" />
               </div>
-              <h3 className="font-bold text-lg mb-2">Outdated Advice</h3>
+              <h3 className="font-bold text-lg mb-2 text-slate-900">
+                Outdated Advice
+              </h3>
               <p className="text-slate-600">
                 Reviews and tips from years ago that no longer apply
               </p>
@@ -379,7 +385,9 @@ export default function GuidoorsLanding() {
               <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Peer-to-Peer Trust</h3>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">
+                Peer-to-Peer Trust
+              </h3>
               <p className="text-slate-600">
                 Younger audiences trust real travelers, not corporate marketing.
                 Get advice from people like you.
@@ -390,7 +398,9 @@ export default function GuidoorsLanding() {
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <Search className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Smart Filtering</h3>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">
+                Smart Filtering
+              </h3>
               <p className="text-slate-600">
                 Find guides that match your travel style - by ferry, budget
                 backpacking, luxury stays, adventure focus.
