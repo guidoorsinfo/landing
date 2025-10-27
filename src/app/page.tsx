@@ -134,7 +134,9 @@ export default function GuidoorsLanding() {
                     </span>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">4.9</span>
+                      <span className="text-sm font-medium text-slate-900">
+                        4.9
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -160,7 +162,9 @@ export default function GuidoorsLanding() {
                     </span>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">5.0</span>
+                      <span className="text-sm font-medium text-slate-900">
+                        5.0
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -186,7 +190,9 @@ export default function GuidoorsLanding() {
                     </span>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">4.8</span>
+                      <span className="text-sm font-medium text-slate-900">
+                        4.8
+                      </span>
                     </div>
                   </div>
                 </div>
