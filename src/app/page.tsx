@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import {
-  MapPin,
   Clock,
   DollarSign,
   Star,
@@ -13,6 +12,7 @@ import {
   Heart,
   Camera,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function GuidoorsLanding() {
   const [email, setEmail] = useState("");
@@ -33,7 +33,13 @@ export default function GuidoorsLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <MapPin className="w-8 h-8 text-indigo-600" />
+              <Image
+                src="/guidoors-icon-512-transparent.png"
+                alt="Guidoors"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Guidoors
               </span>
@@ -210,7 +216,8 @@ export default function GuidoorsLanding() {
               Planning Travel Shouldn't Be Overwhelming
             </h2>
             <p className="text-xl text-slate-600">
-              The current way of travel planning is broken
+              Guidoors connects travelers through authentic, experience-based
+              guides written by people who've already been there.
             </p>
           </div>
 
@@ -517,7 +524,13 @@ export default function GuidoorsLanding() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <MapPin className="w-6 h-6 text-indigo-400" />
+              <Image
+                src="/guidoors-icon-512-transparent-white.png"
+                alt="Guidoors"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
               <span className="text-xl font-bold">Guidoors</span>
             </div>
             <p className="text-slate-400">
